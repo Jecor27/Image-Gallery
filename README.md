@@ -1,37 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Image Gallery
 
-## Getting Started
+A modern, responsive image gallery built with Next.js that fetches high-quality photos from the Pexels API.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 🔍 Search for images by keyword
+- 📱 Responsive design (mobile-friendly)
+- 🌟 Curated image browsing
+- 📄 Pagination support
+- ⚡ Fast loading with optimized images
+- 🎨 Blur placeholders while images load
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 15.4.1
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Image API:** Pexels API
+- **Validation:** Zod
+- **Image Processing:** Plaiceholder (for blur effects)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- A Pexels API key (free at [pexels.com/api](https://www.pexels.com/api/))
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd img-gallery-next
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   
+   Create a `.env.local` file in the root directory:
+   ```env
+   PEXELS_API_KEY=your_pexels_api_key_here
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📖 Usage
+
+- **Home Page:** Browse curated images
+- **Search:** Use the search bar to find specific images
+- **Navigation:** Click the arrows to navigate between pages
+- **View Original:** Click any image to view it on Pexels
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── components/     # Reusable components
+│   ├── results/        # Dynamic search results pages
+│   └── globals.css     # Global styles
+├── lib/                # Utility functions
+└── models/             # TypeScript types and Zod schemas
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Available Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Deployment
 
-## Learn More
+This project is ready to deploy on Vercel:
 
-To learn more about Next.js, take a look at the following resources:
+1. Push your code to GitHub
+2. Connect your repo to Vercel
+3. Add your `PEXELS_API_KEY` environment variable
+4. Deploy!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is open source and available under the [MIT License](LICENSE).
 
-## Deploy on Vercel
+## 🙏 Credits
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Image-Gallery
+- Images provided by [Pexels](https://www.pexels.com/)
+- Built with [Next.js](https://nextjs.org/)
