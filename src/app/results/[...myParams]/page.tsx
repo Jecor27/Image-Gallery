@@ -1,25 +1,27 @@
-import Gallery from "@/app/components/Gallery"
+import Gallery from "@/app/components/Gallery";
 
 type Props = {
-    params: {
-        myParams: (string | undefined)[]
-    }
+  params: Promise<{
+    myParams: (string | undefined)[];
+  }>;
+};
+
+export async function generateMetadata({ params }: Props) {
+  const { myParams } = await params;
+
+  const topic = myParams?.[0] ?? "curated";
+  const page = myParams?.[1] ?? "1";
+
+  return {
+    title: `Results for ${topic} - Page ${page}`,
+  };
 }
 
-export function generateMetadata({ params: { myParams } }: Props) {
+export default async function SearchResults({ params }: Props) {
+  const { myParams } = await params;
 
-    const topic = myParams?.[0] ?? "curated"
-    const page = myParams?.[1] ?? "1"
+  const topic = myParams?.[0] ?? "curated";
+  const page = myParams?.[1] ?? "1";
 
-    return {
-        title: `Results for ${topic} - Page ${page}`
-    }
-}
-
-export default function SearchResults({ params: { myParams } }: Props) {
-
-    const topic = myParams?.[0] ?? "curated"
-    const page = myParams?.[1] ?? "1"
-
-    return <Gallery topic={topic} page={page} />
+  return <Gallery topic={topic} page={page} />;
 }
